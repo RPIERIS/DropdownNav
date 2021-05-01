@@ -1,0 +1,110 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    font-family: 'Rubik', sans-serif;
+}
+
+.container {
+    background-color: #e6f9ff;
+    width: 70%;
+    height: 100vh;
+    margin: 0 auto;
+    max-width: 800px;
+    padding: 0 1em;
+    display: flex;
+    flex-direction: column;
+    transition-property: opacity;
+    transition-duration: 1s;
+}
+
+h1 {
+    margin: 0 0 1em;
+}
+
+p {
+    max-width: 55ch;
+}
+
+img {
+    height: 60vh;
+    margin-top: 2em;
+}
+
+/*-------
+nav styles
+--------*/
+.nav,
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+.nav {
+    background-color: #e0ccff;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    right: 15%;
+    top: 0;
+    height: 100%;
+    display: block;
+    padding: 0 0.25em;
+    visibility: hidden;
+}
+
+.nav-list-item {
+    list-style-type: none;
+    padding: 0.5em;
+}
+
+.nav-list-item:hover {
+    cursor: pointer;
+    background-color: hotpink;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: black;
+}
+
+.nav-list-item:hover .nav-link,
+.nav-list-item:hover .close-menu-icon {
+    color: white;
+}
+
+.open-menu,
+.close-menu {
+    width: 3%;
+    margin-left: auto;
+    padding: 0.5em 1.5em 0 0;
+    
+}
+
+.open-menu:hover {
+    color: hotpink;
+    cursor: pointer;
+}
+
+
+/*-------
+toggle styles
+--------*/
+
+.inactive-container {
+    opacity: 60%;  
+}
+
+.active-nav {
+    /* display: block; */
+    visibility: visible;
+    width: 25%;
+    transition: visibility 0s, width 0.5s linear;
+}
